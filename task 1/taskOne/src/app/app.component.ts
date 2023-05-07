@@ -13,7 +13,6 @@ export class AppComponent {
   @ViewChild('tableRef') tableRef :ElementRef | undefined; 
   title = 'taskOne';
   //table info 
-  
   tableInfo = [  
     {NameEn: 'Apple', NameAr: 'تفاحة',image:'../assets/apple.jpg' },  
     {NameEn: 'Orange', NameAr: 'برتقال',image:'../assets/orange.jpg'  },  
@@ -29,7 +28,7 @@ export class AppComponent {
     {NameEn: 'Tomato', NameAr: 'طماطم',image:'../assets/tomato.jpg'  },  
     {NameEn: 'Mango', NameAr: 'منجا',image:'../assets/mango.jpg'  }  
   ];  
-
+//
   public saveAsPDF(): void {
     html2canvas(this.tableRef?.nativeElement).then((canvas) => {
       const FILEURI = canvas.toDataURL('image/png');
@@ -52,5 +51,4 @@ export class AppComponent {
          })
    
   }
-
 }
