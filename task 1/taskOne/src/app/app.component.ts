@@ -11,7 +11,6 @@ import jsPDF from 'jspdf';
 
 export class AppComponent {
   @ViewChild('tableRef') tableRef :ElementRef | undefined; 
-  //@ViewChild('imageRef') imageRef :ElementRef | undefined; 
   title = 'taskOne';
   //table info 
   
@@ -53,13 +52,5 @@ export class AppComponent {
          })
    
   }
-
-
-
-
-
-
-
-
 
 }
