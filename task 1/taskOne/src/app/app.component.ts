@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import html2canvas from 'html2canvas';
+import jspdf from 'jspdf';
+//import arabic from './arabic-normal.js'
 import jsPDF from 'jspdf';
 @Component({
   selector: 'app-root',
@@ -33,6 +35,7 @@ export class AppComponent {
     html2canvas(this.tableRef?.nativeElement).then((canvas) => {
       const FILEURI = canvas.toDataURL('image/png');
       let PDF = new jsPDF('p','pt', [canvas.width, canvas.height]);
+      //PDF.setDPI(300); 
       let position = 0;
       PDF.addImage(FILEURI, 'PNG', 0, position, canvas.width, canvas.height);
       PDF.save('tableInfo.pdf');
@@ -41,8 +44,15 @@ export class AppComponent {
 
 
   makepdf(){
+    
     html2canvas(this.tableRef?.nativeElement).then((canvas) => {
       let pdf = new jsPDF('p','pt', [canvas.width, canvas.height]);
+   //  const myFont =  ''
+// add the font to jsPDF
+//pdf.addFileToVFS("arabic.ttf", myFont);
+//pdf.addFont("arabic.ttf", "arabic", "normal");
+//pdf.setFont(arabic);
+
       pdf.html(this.tableRef?.nativeElement,{
         callback:(pdf) => {
           pdf.save('tableInfo.pdf')
@@ -50,5 +60,5 @@ export class AppComponent {
       })
          })
    
-  }
+        }
 }
