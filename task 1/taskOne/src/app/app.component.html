@@ -1,0 +1,23 @@
+
+<button type="button" (click)="saveAsPDF()">Save As PDF</button>
+<div  #tableRef  id="tableRef">
+<img #imageRef id="imageRef" src="../assets/sputnik-1-1957-sputnik-1.jpg" width="200px" height="200px">
+  
+<table class="info">
+  
+  <thead>
+    <tr>
+      <th>Name En</th>
+      <th>Name Ar</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of tableInfo">
+      <td>{{item.NameEn}}</td>
+      <td>{{item.NameAr}}</td>
+      <td><img src="{{item.image}}" width="200px" height="200px"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
