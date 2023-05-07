@@ -62,36 +62,4 @@ export class AppComponent {
 
 
 
-  // public downloadAsPDF() {
-  //   const doc = new jsPDF();
-   
-  //   const pdfTable = this.tableRef?.nativeElement;
-   
-  //   var html = htmlToPdfmake(pdfTable.innerHTML);
-     
-  //   const documentDefinition = { content: html };
-  //   pdfMake.createPdf(documentDefinition).open(); 
-     
-  // }
-  // saveAsPDF(){
-  //   let pdfTable = new jsPDF();  
-  //   pdfTable.autoTable(columns, data);
-  // //  pdfTable.addImage(this.imageRef?.nativeElement);
-  //  // pdfTable.addField(this.tableRef?.nativeElement);
-  
-  //   pdfTable.save('pdfTable.pdf');  
-  // }
-
-
-  // generatePDF() {
-  //   const doc = new jsPDF('p', 'pt', 'a4');
-  //   const img = new Image();
-  //   img.src = this.imageRef?.nativeElement.currentSrc;
-  //   img.onload = () => {
-  //     doc.addImage(img, 'JPG', 15, 15, 180, 160);
-  //     doc.html(this.tableRef?.nativeElement.innerHTML);  
-  //     doc.save('document.pdf');
-  //   };
-    
-  // }
 }
